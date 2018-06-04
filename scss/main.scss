@@ -4,6 +4,9 @@
 @import 'swiper';
 
 
+$color-grey: #868a8d;
+$color-gold: #b0a06d;
+
 
 html {
     color: #222;
@@ -11,15 +14,6 @@ html {
     line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -245,12 +239,19 @@ textarea {
     h2,
     h3 {
         page-break-after: avoid;
+        line-height: 1.2;
     }
 }
+
+$padding: 40px;
+$font-base: 12px;
+$main-color: #74787b;
 
 .wrapper{
   padding: 1px;
 }
+
+
 
 body{
   font-family: 'Roboto Condensed', sans-serif;
@@ -258,30 +259,112 @@ body{
 
 .h1, .h2, .h3{
     font-family: 'Roboto Condensed', sans-serif;
+    padding: $padding/4 0;
+    margin-bottom: 25px;
 }
 
-$padding: 40px;
-$font-base: 12px;
-$main-color: #74787b;
+h2, .h2 {
+    font-size: 25px;
 
+  line-height: 1.2;
+}
+
+h3, .h3 {
+  line-height: 1.2;
+}
+
+ul{
+  padding: 0;
+margin: 0;
+}
+
+.logo{
+      max-width: 200px;
+      text-align: center;
+    margin: 0 auto;
+}
+
+$spaces:(1, 2, 3, 4, 5, 6);
+
+  @each $space in $spaces {
+    .space-#{$space}{
+      height: $space * 10 + px;
+    }
+  }
+
+h1, h2 , h3{
+  margin-bottom: 25px;
+}
+
+
+p{
+  padding:  0;
+  margin-bottom: $padding / 3;
+
+  @include media-query($small) {
+   padding: $padding / 5 0 ;
+   font-size: 17px;
+  }
+
+}
+
+.full-img{
+  width: 100%;
+}
 .main-header{
-  padding: $padding 0  $padding * 2  0;
+  padding: $padding 0  $padding * 2  ;
+
+   @include media-query($small) {
+    padding: $padding / 3  ;
+   }
+
+
 }
-.h1{
-  font-size: 58px;
-  color: $main-color;
-  margin-left: 20%;
+.swiper-wrapper{
+  .h1{
+    font-size: 58px;
+    color: $main-color;
+    margin-left: 20%;
+     @include media-query($small) {
+      font-size: 35px;
+      padding: $padding 0;
+        margin: 0 auto;
+      text-align: center;
+     }
+  }
+
+   @include media-query($small) {
+    text-align: center;
+   }
 }
+
+
 .main-nav{
   ul{
     li{
       display: inline-block;
       font-size: $font-base * 1.5;
-      padding: 5px 10px;
+
       a{
         color: $main-color;
+        display: block;
+          padding: 5px 10px;
+            transition: color 1s;
+
+
+        &:hover{
+          color: lighten($main-color, 20);
+
+          cursor: pointer;
+        }
       }
     }
+  }
+  text-align: right;
+
+  @include media-query($small) {
+   text-align: center;
+   margin-top: 20px;
   }
 }
 
@@ -308,32 +391,123 @@ $main-color: #74787b;
   }
 }
 
-.image-slide{
+.text-intro{
+  padding: 20px;
+  position: relative;
+  color: #b7b7b7;
+  margin: 20px;
+
+  @include media-query($small) {
+    padding: 5px;
+      margin: 10px;
+  }
+
+  &:before{
+    display: block;
+    content: '';
+      position: absolute;
+    /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+    content: "";
+    display: inline-block;
+    /* By using an em scale, the arrows will size with the font */
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: -10px;
+    border-right: 5px solid #347d21;
+    border-top: 5px solid #347d21;
+    transform: rotate(-90deg);
+  }
+
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+    content: "";
+    display: inline-block;
+    /* By using an em scale, the arrows will size with the font */
+    width: 20px;
+    height: 20px;
+    bottom: -10px;
+    right: -10px;
+    border-left: 5px solid #347d21;
+    border-bottom: 5px solid #347d21;
+    transform: rotate(-90deg);
+  }
+}
+
+.image-slide-wrapper{
   background: url('../img/web-agency.jpg') no-repeat;
-  background-size: auto 100%;
+  background-size: auto 110%;
+  background-position: top right;
+  overflow: hidden;
+    height: 72vh;
+
+  @include media-query($medium-down) {
+    background: none;
+      height: 45vh;
+  }
+
+  @include media-query($small) {
+    background-position: center;
+    height: 100vh;
+  }
+}
+
+.image-slide{
+  // background: url('../img/web-agency.jpg') no-repeat;
+  // background-size: auto 100%;
   background-position: top center;
-  height: 60vh;
+
+  @include media-query($medium-down) {
+    height: 45vh;
+    background: url('../img/web-agency.jpg') no-repeat;
+    background-size: 94% auto;
+    background-position: top center;
+  }
+
+  @include media-query($small) {
+    background-position: center;
+    background-size: auto 100%;
+    height: 55vh;
+    margin-top: 30px;
+  }
+
+
+
 }
 
 .card {
     border: none;
     margin-bottom: 30px;
     background: white;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#efefef+49,ffffff+57 */
+background: rgb(239,239,239); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(239,239,239,1) 49%, rgba(255,255,255,1) 57%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(239,239,239,1) 49%,rgba(255,255,255,1) 57%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(239,239,239,1) 49%,rgba(255,255,255,1) 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    border-radius: 6px;
+    box-shadow: 0px 11px 31px #00000021;
+    border: 2px solid white;
+
 }
 
 .card-body {
     padding: 1.25rem;
+
 }
 
 .card .card-body .icon-box {
-    padding: 20px 0;
+    padding: 2px 0;
     color: #af9e6e;
     font-size: 49px;
     text-align: center;
 }
 
 .card .card-body h6{
-  font-size: 29px;
+  font-size: 21px;
     text-align: center;
 
 }
@@ -344,4 +518,178 @@ $main-color: #74787b;
 
 .wrapper-header{
   overflow: hidden;
+}
+
+.dark{
+  padding:  $padding 0;
+  background: $main-color;
+  margin: $padding 0 0 0;
+
+  .h1{
+    font-size: 67px;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+  }
+
+  h1, h2 , h3 , p{
+    color: white;
+  }
+}
+
+.footer{
+  padding:  $padding 0;
+
+  background: #262626;
+
+
+    h1, h2 , h3 , p{
+      color: white;
+    }
+}
+
+
+/* form style */
+.form-style{
+
+	padding: 40px 30px 40px 40px;
+	font: 13px Arial, Helvetica, sans-serif;
+  @extend .card;
+
+	background: #FFFFFF;
+}
+.form-style-heading{
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+.form-style label{
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+.form-style label > span{
+    width: 100px;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+.form-style span.required{
+    color:red;
+}
+.form-style .tel-number-field{
+    width: 40px;
+    text-align: center;
+}
+.form-style  .long{
+    width: 120px;
+}
+.form-style input.input-field{
+    width: 48%;
+
+}
+
+.form-style input.input-field,
+.form-style .tel-number-field,
+.form-style .textarea-field,
+ .form-style .select-field{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-style .input-field:focus,
+.form-style .tel-number-field:focus,
+.form-style .textarea-field:focus,
+.form-style .select-field:focus{
+    border: 1px solid #0C0;
+}
+.form-style .textarea-field{
+    height:100px;
+    width: 55%;
+}
+.form-style input[type="button"],
+.form-style input[type="submit"] {
+    // -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+    // -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+    // box-shadow: inset 0px 1px 0px 0px #3985B1;
+    // background-color: #216288;
+    // border: 1px solid #17445E;
+    // display: inline-block;
+    // cursor: pointer;
+    // color: #FFFFFF;
+    // padding: 8px 18px;
+    // text-decoration: none;
+    // // font: 12px Arial, Helvetica, sans-serif;
+    // @extend .btn
+}
+.form-style input[type="button"]:hover,
+.form-style input[type="submit"]:hover {
+    // background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+    // background-color: #28739E;
+}
+.form-style .success{
+	background: #D8FFC0;
+	padding: 5px 10px 5px 10px;
+	margin: 0px 0px 5px 0px;
+	border: none;
+	font-weight: bold;
+	color: #2E6800;
+	border-left: 3px solid #2E6800;
+}
+.form-style .error {
+	background: #FFE8E8;
+	padding: 5px 10px 5px 10px;
+	margin: 0px 0px 5px 0px;
+	border: none;
+	font-weight: bold;
+	color: #FF0000;
+	border-left: 3px solid #FF0000;
+}
+
+.btn-primary{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ec8b46+0,ee7338+92 */
+  background: rgb(236,139,70); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(236,139,70,1) 0%, rgba(238,115,56,1) 92%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(236,139,70,1) 0%,rgba(238,115,56,1) 92%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(236,139,70,1) 0%,rgba(238,115,56,1) 92%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec8b46', endColorstr='#ee7338',GradientType=0 ); /* IE6-9 */
+  color: white;
+  padding: 6px 27px;
+  border: solid 1px #b2b2b3;
+
+  border-radius: 20px;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+   -webkit-border-radius: 20px;
+
+   /* Firefox 1-3.6 */
+   -moz-border-radius: 20px;
+
+   /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+   border-radius: 20px;
+
+
+ &:hover{
+   border: solid 1px darken(#b2b2b3 , 10%);
+ }
+
 }

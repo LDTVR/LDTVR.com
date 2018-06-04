@@ -26,7 +26,7 @@
           <img class="wow fadeInLeft hidden-xs full-img logo" src="img/logo.jpg" alt="">
           <img class="wow fadeInLeft visible-xs-block logo full-img" src="img/logo-h.jpg" alt="">
         </div>
-        <nav class="col-md-7 col-sm-6 main-nav">
+        <nav class="col-md-7 col-sm-6 main-nav text-right">
           <ul>
             <li><a href="#virtual" class="page-scroll">Virtual</a></li>
             <li><a href="#projects" class="page-scroll">Projects</a></li>
