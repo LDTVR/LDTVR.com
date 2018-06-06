@@ -574,6 +574,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
     float: left;
     padding-top: 8px;
     padding-right: 5px;
+
+    @include media-query($small) {
+      width: 100%;
+    }
 }
 .form-style span.required{
     color:red;
@@ -581,15 +585,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', end
 .form-style .tel-number-field{
     width: 40px;
     text-align: center;
+
+    @include media-query($small) {
+        width: 21%;
+    }
 }
 .form-style  .long{
     width: 120px;
+
+      @include media-query($small) {
+          width: 71%;
+      }
 }
 .form-style input.input-field{
     width: 48%;
 
+    @include media-query($small) {
+      width: 100%;
+      margin-top: 7px;
+
+    }
+
 }
 
+.form-style .select-field{
+
+  @include media-query($small) {
+    width: 100%;
+    margin-top: 7px;
+
+  }
+
+}
 .form-style input.input-field,
 .form-style .tel-number-field,
 .form-style .textarea-field,
@@ -626,6 +653,12 @@ input[type=number]::-webkit-outer-spin-button {
 .form-style .textarea-field{
     height:100px;
     width: 55%;
+
+    @include media-query($small) {
+      width: 100%;
+      margin-top: 7px;
+
+    }
 }
 .form-style input[type="button"],
 .form-style input[type="submit"] {
