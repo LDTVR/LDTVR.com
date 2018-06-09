@@ -322,9 +322,9 @@ p{
 }
 .swiper-wrapper{
   .h1{
-    font-size: 58px;
+    font-size: 59px;
     color: $main-color;
-    margin-left: 20%;
+    margin-left: 12%;
 
       @include media-query($medium-down) {
           font-size: 36px;
@@ -444,10 +444,10 @@ p{
 .image-slide-wrapper{
   background: url('../img/web-agency.jpg') no-repeat;
   background-size: auto 110%;
-  background-position: top right;
+    background-position: 77% 0;
   overflow: hidden;
 
-  min-height: 72vh;
+  // min-height: 72vh;
   padding-bottom: 20px;
   @include media-query($medium-up) {
     display: flex;

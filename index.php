@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <!--icons-->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?32323">
 
 </head>
 
@@ -38,7 +38,7 @@
 
     </header>
     <div class="image-slide-wrapper wow fadeIn">
-      <div class="col-sm-6">
+      <div class="col-sm-6 ">
         <div class="col-sm-2 navigation hidden-xs">
           <a href="#" class="active">01</a>
           <a href="#">02</a>
@@ -48,15 +48,15 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <h3 class="h1">Think Creative & <br class="hidden-sm hidden-md">Build Impossible</h3>
-                <div class="">
-                  <div class="col-sm-10 col-sm-push-2">
+                <h3 class="h1 text-center ">Creative & Innovation <br class="hidden-sm hidden-md">Solutions</h3>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-push-1">
                     <p class='text-intro'>LDTVR is a full service consulting agency focused on online branding, communications, design and digital creative.</p>
                       <div class="space-1"></div>
-                    <a href="#contact" class="page-scroll btn btn-primary"> Contact us</a>
+                      <div class="text-center">
+                        <a href="#contact" class="page-scroll btn btn-primary"> Contact us</a>
+                      </div>
                   </div>
-
-
                 </div>
               </div>
               <div class="swiper-slide">
@@ -65,7 +65,6 @@
               <div class="swiper-slide">
                 <h3 class="h1">Office Space</h3>
               </div>
-
             </div>
           </div>
 
@@ -284,7 +283,7 @@
                   <option value="">---- Select ----</option>
                   <option value="General Question">General Question</option>
                   <option value="Advertise">Advertisement</option>
-                  <option value="Partnership">Partnership Oppertunity</option>
+                  <option value="Partnership">Partnership Opportunity</option>
                   </select>
               </label>
               <label for="field5"><span>Message <span class="required">*</span></span>
@@ -330,7 +329,7 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-  <script async src="https://unpkg.com/ionicons@4.1.1/dist/ionicons.js"></script>
+  <script src="https://unpkg.com/ionicons@4.1.1/dist/ionicons.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
