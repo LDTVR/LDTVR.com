@@ -48,7 +48,7 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <h3 class="h1 text-center ">Creative & Innovation <br class="hidden-sm hidden-md">Solu</h3>
+                <h3 class="h1 text-center ">Creative & Innovation <br class="hidden-sm hidden-md">Solutions</h3>
                 <div class="row">
                   <div class="col-sm-10 col-sm-push-1">
                     <p class='text-intro'>LDTVR is a full service consulting agency focused on online branding, communications, design and digital creative.</p>
