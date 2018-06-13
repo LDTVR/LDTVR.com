@@ -14,6 +14,18 @@ html {
     line-height: 1.4;
 }
 
+.social{
+
+  margin-top: 45px;
+
+    @include media-query($small) {
+      margin: 25px 0;
+    }
+  a{
+    color: #676767;
+  }
+}
+
 
 ::-moz-selection {
     background: #b3d4fc;

@@ -56,6 +56,7 @@
                       <div class="text-center">
                         <a href="#contact" class="page-scroll btn btn-primary"> Contact us</a>
                       </div>
+
                   </div>
                 </div>
               </div>
@@ -70,7 +71,23 @@
 
 
         </div>
-
+        <div class="social col-sm-8 col-sm-push-3">
+          <div class="col-xs-4 text-center">
+            <a href="http://www.facebook.com/ldtvr" target="_blank">
+            Facebook
+            </a>
+          </div>
+          <div class="col-xs-4 text-center">
+            <a href="http://www.instagram.com/ldtvr" target="_blank">
+              Instagram
+            </a>
+          </div>
+          <div class="col-xs-4 text-center">
+            <a href="ttps://www.linkedin.com/company/27170483/ " target="_blank">
+              LinkedIn
+            </a>
+          </div>
+        </div>
       </div>
       <div class="col-sm-6 image-slide ">
         <!-- <img src="img/web-agency.jpg" alt=""> -->
